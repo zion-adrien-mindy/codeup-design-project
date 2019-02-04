@@ -5,33 +5,235 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Codeup Design</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="http://fonts.googleapis.com/css?family=Abel|Anton" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
     <link rel="stylesheet" href="css/codeup-design-page.css">
+    <style>
+        :root {
+            --red: #E6563B;
+            --yellow: #CE8D28;
+            --green: #7CB06C;
+            --blue: #00ABA9;
+        }
+        body {
+            font-family: 'Abel', sans-serif;
+        }
+
+        .design {
+            background-color: var(--red);
+        }
+
+        .develop {
+            background-color: var(--yellow);
+        }
+
+        .support {
+            background-color: var(--green);
+        }
+
+        .host{
+            background-color: var(--blue);
+
+        }
+        .anton {
+            font-family: 'Anton', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .circle {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+
+            padding: 1em;
+            border: 5px solid white;
+            border-radius: 50%;
+            margin: 1em;
+        }
+
+
+    </style>
 </head>
-<body>
+<body class="bg-light">
 <!--  Breakpoints: none, sm, m, lg, and xl  -->
 <!--  Nav: Contains LOGO, TITLE: "Codeup Design" and NAVBAR: Services, Work, Blog, Content  -->
 <!--  Header: Contains "Visual Design & Web Development" HEADING and "From Park City, UH" SUBHEADING plus the four company culture circles (CONTAINER)  -->
 <!--  Main: Contains ARTICLE with Selected Work and ASIDE with links/twitter  -->
-    <header>
-        Generally an image of the product/logo with a call to action, like subscribing or signing up.
-    </header>
-    <nav>
-        Usually an unordered list with links to the main pages of the site or application
+    <nav class="text-center">
+        <div class="container container-fluid col-12">
+            <div class="row">
+                <div class="col">
+                    sdflhasg
+                </div>
+            </div>
+            <div class="row bg-white">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <img class="img-fluid" src="images/logo.jpg" alt="codeup design logo">
+                </div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row">
+                <div class="col">adflash</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>codeup design</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul class="nav">
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </nav>
-    <main>
-        <section class="pricing-plans">
-            Sometimes a description of the pricing plans for the product
-        </section>
-        <article>
-            The description of the product/service/application
+
+    <header>
+        <div class="container container-fluid col-12 text-center anton">
+            <div class="row">
+                <div class="col">
+                    <h1>visual design & web development</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h4>from park city, utah</h4>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container anton">
+            <div class="row">
+                <div class="col-6">
+                    <span class="circle design">
+                        Design
+                    </span>
+                </div>
+                <div class="col-6">
+                    <span class="circle develop">develop</span>
+                </div>
+                <div class="col-6">
+                    <span class="circle support">support</span>
+                </div>
+                <div class="col-6">
+                    <span class="circle host">host</span>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </section>
+
+    <main class="container text-center">
+        <article class="container">
+            <div class="row">
+                <div class="col">
+                    SELECTED WORK
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6">
+
+                    <div class="container">
+                        <div class="row">
+                            <img class="img-fluid border rounded" src="images/apple-ipad.jpg" alt="Apple iPad">
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                featured project
+                            </div>
+                            <div class="col">
+                                <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
+                                <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
+                                <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
+                                <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                    <div class="row">
+                        <img class="img-fluid" src="images/macbook.jpg" alt="MacBook">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            featured project
+                    </div>
+                        <div class="col">
+                            <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
+                            <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
+                            <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
+                            <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                    <div class="row">
+                        <img class="img-fluid" src="images/man.jpg" alt="A man wearing glasses">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            featured project
+                        </div>
+                        <div class="col">
+                            <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
+                            <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
+                            <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
+                            <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                    <div class="row">
+                        <img class="img-fluid" src="images/security.jpg" alt="Security">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            featured project
+                        </div>
+                        <div class="col">
+                            <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
+                            <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
+                            <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
+                            <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
         </article>
+
+        <aside class="container">
+
+            <span><img class="mobile" src="images/mobile-phone.jpg" alt="Mobile">THE ADMIN BAR AND ABSOLUTE POSITIONING</span>
+
+
+            <span><img class="head" src="images/head.jpg" alt="head">NIBBLER AWESOME WEBSITE TESTING</span>
+
+
+            <span><img class="ipad" src="images/ipad.jpg" alt="ipad">HOW TO GET GOOGLE TO LIKE YOU</span>
+
+            <p><span><i class="fab fa-twitter"></i>LAST TWEET</span>
+            </p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim orci eget justo euismod malesuada. Curabitur nec eleifend ipsum. Praesent cursus erat eget massa sollicitudin luctus. Mauris ultricies non massa.</p>
+
+        </aside>
     </main>
-    <aside>
-        A secondary navigation element or ads are common in this place
-    </aside>
-    <footer>
-        Secondary links and copyright notices
-    </footer>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
