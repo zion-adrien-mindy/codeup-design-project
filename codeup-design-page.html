@@ -17,9 +17,14 @@
             --green: #7CB06C;
             --blue: #00ABA9;
         }
+
         body {
             font-family: 'Abel', sans-serif;
+            align-content: center;
+            margin: auto;
         }
+
+
 
         .design {
             background-color: var(--red);
@@ -49,192 +54,232 @@
             color: white;
             text-transform: uppercase;
             text-align: center;
+            line-height: calc(100px - 3em);
 
             padding: 1em;
-            border: 5px solid white;
+            border: 0.5em solid white;
             border-radius: 50%;
-            margin: 1em;
+            /*margin: 1em;*/
+        }
+        a {
+            color: black;
+            text-transform: uppercase;
+        }
+        article {
+            box-sizing: content-box;
+            max-width: 300px;
+            margin: 20px;
+            text-transform: uppercase;
         }
 
 
+        aside img{
+            width: 35%;
+            height: auto;
+            margin-right: 1em;
+
+        }
+
+        h1 {
+            margin-bottom: 1em;
+            font-size: 3em;
+        }
+
+        h4 {
+            margin-bottom: 1em;
+            font-size: 2em;
+        }
+        nav {
+            margin-bottom: 2em;
+            font-size: 1.5em;
+        }
+        @media screen {
+            #xsm-layout {
+                visibility: visible;
+            }
+        }
+        @media screen and (min-width: 576px) {
+            #xsm-layout {
+                display:none;
+            }
+
+        }
+
+        @media screen and (min-width: 768px) {
+            #xsm-layout {
+                display:none;
+            }
+        }
     </style>
 </head>
+
 <body class="bg-light">
 <!--  Breakpoints: none, sm, m, lg, and xl  -->
 <!--  Nav: Contains LOGO, TITLE: "Codeup Design" and NAVBAR: Services, Work, Blog, Content  -->
 <!--  Header: Contains "Visual Design & Web Development" HEADING and "From Park City, UH" SUBHEADING plus the four company culture circles (CONTAINER)  -->
 <!--  Main: Contains ARTICLE with Selected Work and ASIDE with links/twitter  -->
+
     <nav class="text-center">
-        <div class="container container-fluid col-12">
-            <div class="row">
-                <div class="col">
-                    sdflhasg
-                </div>
+        <div id="xsm-layout">
+            <div class="row bg-white w-100" style="margin: 100px 0 0 0; height: 100px;">
             </div>
-            <div class="row bg-white">
-                <div class="col-4"></div>
-                <div class="col-4">
-                    <img class="img-fluid" src="images/logo.jpg" alt="codeup design logo">
-                </div>
-                <div class="col-4"></div>
+
+            <div class="container" style="margin: -150px auto 1em auto;">
+                <img class="img-fluid" src="images/logo.png" alt="codeup-design-logo" style="max-width: 200px; height: auto;">
             </div>
-            <div class="row">
-                <div class="col">adflash</div>
-            </div>
+
+            <h1 style="margin-bottom: 0.4em;">codeup design</h1>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">blog</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">contact</a></li>
+            </ul>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1>codeup design</h1>
-                </div>
+
+        <div id="sm-layout">
+            <div class="row bg-white w-100 d-flex justify-content-center align-items-center" style="margin: 100px 0 100px 0; height: 100px;">
+                <ul class="nav" style="margin-top: 150px">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">work</a>
+                    </li>
+                    <li class="nav-item"> <div class="container">
+                        <img class="img-fluid" src="images/logo.png" alt="codeup-design-logo" style="max-width: 200px; height: auto; ">
+                    </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">blog</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">contact</a></li>
+                </ul>
             </div>
-            <div class="row">
-                <div class="col">
-                    <ul class="nav">
-                        <li></li>
-                    </ul>
-                </div>
-            </div>
+
+            <h1 style="margin-bottom: 0.4em;">codeup design</h1>
         </div>
     </nav>
 
-    <header>
-        <div class="container container-fluid col-12 text-center anton">
-            <div class="row">
-                <div class="col">
-                    <h1>visual design & web development</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <h4>from park city, utah</h4>
-                </div>
-            </div>
-        </div>
-    </header>
+    <div id="fixed-width" class="container">
+        <header class="anton text-center">
+            <h1>visual design & web development</h1>
+            <h4>from park city, utah</h4>
+        </header>
 
-    <section>
-        <div class="container anton">
-            <div class="row">
-                <div class="col-6">
-                    <span class="circle design">
-                        Design
-                    </span>
-                </div>
-                <div class="col-6">
-                    <span class="circle develop">develop</span>
-                </div>
-                <div class="col-6">
-                    <span class="circle support">support</span>
-                </div>
-                <div class="col-6">
-                    <span class="circle host">host</span>
-                </div>
-            </div>
-            <hr>
-        </div>
-    </section>
+        <section class="d-flex anton flex-wrap text-center justify-content-between">
+            <span class="circle design ">Design</span>
+            <span class="circle develop">develop</span>
+            <span class="circle support">support</span>
+            <span class="circle host">host</span>
+        </section>
 
-    <main class="container text-center">
-        <article class="container">
+        <main>
             <div class="row">
-                <div class="col">
-                    SELECTED WORK
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-sm-6">
+               <div class="col-12 col-md-8">
 
-                    <div class="container">
-                        <div class="row">
-                            <img class="img-fluid border rounded" src="images/apple-ipad.jpg" alt="Apple iPad">
+                    <div class="container d-flex flex-wrap">
+                        <article>
+                    <img class="img-fluid img-thumbnail rounded" src="images/apple-ipad.jpg" alt="Apple iPad">
+                    <div class="row">
+                        <div class="col">
+                            featured project
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                featured project
+                        <div class="col text-right">
+                            <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
+                            <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
+                            <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
+                            <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
+                        </div>
+                    </div>
+                </article>
+
+                        <article>
+                            <img class="img-fluid img-thumbnail rounded" src="images/macbook.jpg"  alt="MacBook">
+                            <div class="row">
+                                <div class="col">
+                                    featured project
+                                </div>
+                                <div class="col text-right">
+                                    <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
+                                    <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
+                                    <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
+                                    <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
+                                </div>
                             </div>
-                            <div class="col">
-                                <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
-                                <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
-                                <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
-                                <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
+                        </article>
+                        <article>
+                            <img class="img-fluid img-thumbnail rounded" src="images/man.jpg" alt="A man wearing glasses">
+                            <div class="row">
+                                <div class="col">
+                                    featured project
+                                </div>
+                                <div class="col text-right">
+                                    <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
+                                    <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
+                                    <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
+                                    <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
+                                </div>
                             </div>
-                        </div>
+                        </article>
+
+                        <article>
+                            <img class="img-fluid img-thumbnail rounded" src="images/security.jpg" height="214.81px" alt="Security">
+                            <div class="row">
+                                <div class="col">
+                                    featured project
+                                </div>
+                                <div class="col text-right">
+                                    <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
+                                    <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
+                                    <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
+                                    <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
+                <div class="col-12 col-md-4">
+                        <aside class="anton">
 
-                <div class="col-12 col-sm-6">
-                    <div class="row">
-                        <img class="img-fluid" src="images/macbook.jpg" alt="MacBook">
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            featured project
-                    </div>
-                        <div class="col">
-                            <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
-                            <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
-                            <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
-                            <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
-                        </div>
-                    </div>
-                </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <img class="float-left" src="images/mobile-phone.jpg" alt="Mobile">
+                                    THE ADMIN BAR AND ABSOLUTE POSITIONING
+                                </div>
+                            </div>
 
-                <div class="col-12 col-sm-6">
-                    <div class="row">
-                        <img class="img-fluid" src="images/man.jpg" alt="A man wearing glasses">
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            featured project
-                        </div>
-                        <div class="col">
-                            <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
-                            <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
-                            <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
-                            <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
-                        </div>
-                    </div>
-                </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <img class="float-left" src="images/head.jpg" alt="head">
+                                    NIBBLER AWESOME WEBSITE TESTING
+                                </div>
+                            </div>
 
-                <div class="col-12 col-sm-6">
-                    <div class="row">
-                        <img class="img-fluid" src="images/security.jpg" alt="Security">
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            featured project
-                        </div>
-                        <div class="col">
-                            <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
-                            <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
-                            <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
-                            <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
-                        </div>
-                    </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <img class="float-left" src="images/ipad.jpg" alt="ipad">
+                                    HOW TO GET GOOGLE TO LIKE YOU
+                                </div>
+                            </div>
 
-
-                </div>
+                            <div class="row">
+                                <div class="col">
+                                    <h6 class="mb-4"><i class="fab fa-twitter" style="height:20%;"></i>LAST TWEET</h6>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim orci eget justo euismod malesuada. Curabitur nec eleifend ipsum. Praesent cursus erat eget massa sollicitudin luctus. Mauris ultricies non massa.
+                                </div>
+                            </div>
+                                </aside>
+                    </div>
             </div>
-
-        </article>
-
-        <aside class="container">
-
-            <span><img class="mobile" src="images/mobile-phone.jpg" alt="Mobile">THE ADMIN BAR AND ABSOLUTE POSITIONING</span>
-
-
-            <span><img class="head" src="images/head.jpg" alt="head">NIBBLER AWESOME WEBSITE TESTING</span>
-
-
-            <span><img class="ipad" src="images/ipad.jpg" alt="ipad">HOW TO GET GOOGLE TO LIKE YOU</span>
-
-            <p><span><i class="fab fa-twitter"></i>LAST TWEET</span>
-            </p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim orci eget justo euismod malesuada. Curabitur nec eleifend ipsum. Praesent cursus erat eget massa sollicitudin luctus. Mauris ultricies non massa.</p>
-
-        </aside>
-    </main>
-
+        </main>
+    </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
