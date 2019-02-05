@@ -24,8 +24,6 @@
             margin: auto;
         }
 
-
-
         .design {
             background-color: var(--red);
         }
@@ -42,78 +40,157 @@
             background-color: var(--blue);
 
         }
+
         .anton {
-            font-family: 'Anton', sans-serif;
+            font-family: "Anton", sans-serif;
             text-transform: uppercase;
         }
 
+        .able {
+            font-family: "Abel", sans-serif;
+        }
         .circle {
-            display: inline-block;
-            width: 100px;
-            height: 100px;
+            display: block;
+            width: 100%;
             color: white;
             text-transform: uppercase;
-            text-align: center;
-            line-height: calc(100px - 3em);
+            font-size: 1.4em;
+            vertical-align: middle;
+            font-weight:bold;
+            line-height: calc(150px - 1em);
 
-            padding: 1em;
+
+
             border: 0.5em solid white;
             border-radius: 50%;
+
             /*margin: 1em;*/
         }
+        span {
+            padding: 0;
+            margin: 0;
+        }
+        .fixed-width {
+            max-width: 900px;
+        }
+
         a {
             color: black;
             text-transform: uppercase;
         }
+
         article {
             box-sizing: content-box;
-            max-width: 300px;
+            /*max-width: 300px;*/
             margin: 20px;
             text-transform: uppercase;
         }
-
 
         aside img{
             width: 35%;
             height: auto;
             margin-right: 1em;
-
         }
 
-        h1 {
-            margin-bottom: 1em;
-            font-size: 3em;
-        }
 
         h4 {
             margin-bottom: 1em;
             font-size: 2em;
         }
+
         nav {
             margin-bottom: 2em;
             font-size: 1.5em;
         }
+
+
+        /* X S M A L L */
         @media screen {
+            body {
+                background-color: red;
+            }
             #xsm-layout {
-                visibility: visible;
+                display: block;
+            }
+
+            #sm-layout, #md-layout {
+                display: none;
+            }
+            li {
+                font-size: 20px;
+            }
+            h1 {
+                font-size: 4em;
+                margin-bottom: 1em;
+            }
+            h4{
+                font-size: 3em;
             }
         }
+
+        /* S M A L L */
         @media screen and (min-width: 576px) {
-            #xsm-layout {
-                display:none;
+            body {
+                background-color: orange;
+            }
+            #xsm-layout, #md-layout {
+                display: none;
+            }
+
+            #sm-layout {
+                display: block;
+            }
+            li {
+                font-size: 15px;
             }
 
         }
 
+        /* M E D I U M */
         @media screen and (min-width: 768px) {
-            #xsm-layout {
-                display:none;
+            body {
+                background-color: yellow;
+            }
+            #xsm-layout, #sm-layout {
+                display: none;
+            }
+
+            #md-layout {
+                display: block;
+            }
+        }
+
+
+        @media screen and (min-width: 992px) {
+            body {
+                background-color: green;
+            }
+            #xsm-layout, #sm-layout {
+                display: none;
+            }
+
+            #md-layout {
+                display: block;
+            }
+        }
+
+        /* E X T R A - L A R G E*/
+        @media screen and (min-width: 1200px) {
+            body {
+                background-color: blue;
+            }
+            #xsm-layout, #sm-layout {
+                display: none;
+            }
+
+            #md-layout {
+                display: block;
             }
         }
     </style>
 </head>
 
-<body class="bg-light">
+<body>
 <!--  Breakpoints: none, sm, m, lg, and xl  -->
 <!--  Nav: Contains LOGO, TITLE: "Codeup Design" and NAVBAR: Services, Work, Blog, Content  -->
 <!--  Header: Contains "Visual Design & Web Development" HEADING and "From Park City, UH" SUBHEADING plus the four company culture circles (CONTAINER)  -->
@@ -128,7 +205,7 @@
                 <img class="img-fluid" src="images/logo.png" alt="codeup-design-logo" style="max-width: 200px; height: auto;">
             </div>
 
-            <h1 style="margin-bottom: 0.4em;">codeup design</h1>
+            <h2 style="margin-bottom: 0.4em;">codeup design</h2>
             <ul class="nav justify-content-center">
                 <li class="nav-item">
                     <a class="nav-link" href="#">services</a>
@@ -145,110 +222,207 @@
 
         <div id="sm-layout">
             <div class="row bg-white w-100 d-flex justify-content-center align-items-center" style="margin: 100px 0 100px 0; height: 100px;">
-                <ul class="nav" style="margin-top: 150px">
+                <ul class="nav" style="margin-top: 70px">
                     <li class="nav-item">
                         <a class="nav-link" href="#">services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">work</a>
                     </li>
-                    <li class="nav-item"> <div class="container">
-                        <img class="img-fluid" src="images/logo.png" alt="codeup-design-logo" style="max-width: 200px; height: auto; ">
-                    </div>
+                    <li class="nav-item">
+                        <div class="container" style="margin-top: -80px;">
+                            <img class="img-fluid" src="images/logo.png" alt="codeup-design-logo" style="max-width: 200px; height: auto;">
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">blog</a></li>
+                        <a class="nav-link" href="#">blog</a>
+                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">contact</a></li>
+                        <a class="nav-link" href="#">contact</a>
+                    </li>
                 </ul>
             </div>
 
-            <h1 style="margin-bottom: 0.4em;">codeup design</h1>
+            <h1 style="margin-top: -29px;">codeup design</h1>
+        </div>
+
+        <div id="md-layout">
+            <!--<div class="row bg-white w-100 align-items-center " style="margin: 100px 0 0 0; height: 100px;">-->
+                <!--<div class="container-fluid">-->
+                    <!--<div class="d-inline-flex justify-content-start">-->
+                        <!--<ul class="nav align-items-center m-0 p-0">-->
+                            <!--<li class="nav-item">-->
+                                <!--<div class="container"> &lt;!&ndash; style="margin: -75px auto 1em auto;"&ndash;&gt;-->
+                                    <!--<img class="img-fluid" src="images/logo.png" alt="codeup-design-logo" style="max-width: 200px; height: auto;">-->
+                                <!--</div>-->
+                            <!--</li>-->
+                            <!--<li class="nav-item">-->
+                                <!--<h3 style="margin: 0;">codeup design</h3>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="d-inline-flex justify-content-end">-->
+                        <!--<ul class="nav">-->
+                            <!--<li class="nav-item">-->
+                                <!--<a class="nav-link" href="#">services</a>-->
+                            <!--</li>-->
+                            <!--<li class="nav-item">-->
+                                <!--<a class="nav-link" href="#">work</a>-->
+                            <!--</li>-->
+                            <!--<li class="nav-item">-->
+                                <!--<a class="nav-link" href="#">blog</a></li>-->
+                            <!--<li class="nav-item">-->
+                                <!--<a class="nav-link" href="#">contact</a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+
+            <!--<div class="row bg-white w-100 align-items-center " style="margin: 100px 0 0 0; height: 100px;">-->
+
+            <nav class="navbar bg-white" style="margin: 100px 0 0 0; height: 60px;">
+                <div class="container" style="max-width: 900px;">
+                <a class="navbar-brand" href="#" style="text-transform: lowercase;">
+                    <img src="images/logo.png" width="auto" height="100px" class="d-inline-block align-center" alt="">
+                    codeup design
+                </a>
+                <div class="form-inline my-2 my-lg-0">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">contact</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+            </div>
         </div>
     </nav>
 
-    <div id="fixed-width" class="container">
+
+    <div class="container fixed-width">
         <header class="anton text-center">
             <h1>visual design & web development</h1>
             <h4>from park city, utah</h4>
         </header>
 
-        <section class="d-flex anton flex-wrap text-center justify-content-between">
-            <span class="circle design ">Design</span>
-            <span class="circle develop">develop</span>
-            <span class="circle support">support</span>
-            <span class="circle host">host</span>
-        </section>
+        <div class="text-center">
+            <div class="row">
+                <div class="col-6 col-sm-3">
+                    <img class="img-fluid" src="images/design.png" alt="design">
+                </div>
+                <div class="col-6 col-sm-3">
+                    <img class="img-fluid" src="images/develop.png" alt="develop">
+                </div>
+                <div class="col-6 col-sm-3">
+                    <img class="img-fluid" src="images/support.png" alt="support">
+                    </div>
+                <div class="col-6 col-sm-3">
+                    <img class="img-fluid" src="images/host.png" alt="host">
+                </div>
+            </div>
+        </div>
+
+        <hr style="margin-bottom:4em;">
 
         <main>
             <div class="row">
                <div class="col-12 col-md-8">
-
-                    <div class="container d-flex flex-wrap">
-                        <article>
-                    <img class="img-fluid img-thumbnail rounded" src="images/apple-ipad.jpg" alt="Apple iPad">
-                    <div class="row">
-                        <div class="col">
-                            featured project
+                    <div class="container">
+                        <div class="row">
+                            <div class="col text-md-left">
+                                SELECTED WORK
+                            </div>
                         </div>
-                        <div class="col text-right">
-                            <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
-                            <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
-                            <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
-                            <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
+                        <div class="row">
+                            <div class="col-12 col-sm-6">
+                                <article>
+                                <img class="img-fluid img-thumbnail rounded" src="images/apple-ipad.jpg" alt="Apple iPad">
+                                <div class="row">
+                                    <div class="col">
+                                        featured project
+                                    </div>
+                                    <div class="col text-right">
+                                        <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
+                                        <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
+                                        <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
+                                        <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
+                                    </div>
+                                </div>
+                            </article>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <article>
+                                <img class="img-fluid img-thumbnail rounded" src="images/macbook.jpg"  alt="MacBook">
+                                <div class="row">
+                                    <div class="col">
+                                        featured project
+                                    </div>
+                                    <div class="col text-right">
+                                        <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
+                                        <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
+                                        <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
+                                        <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
+                                    </div>
+                                </div>
+                            </article>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <article>
+                                <img class="img-fluid img-thumbnail rounded" src="images/man.jpg" alt="A man wearing glasses">
+                                <div class="row">
+                                    <div class="col">
+                                        featured project
+                                    </div>
+                                    <div class="col text-right">
+                                        <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
+                                        <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
+                                        <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
+                                        <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
+                                    </div>
+                                </div>
+                            </article>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <article>
+                                <img class="img-fluid img-thumbnail rounded" src="images/security.jpg" height="214.81px" alt="Security">
+                                <div class="row">
+                                    <div class="col">
+                                        featured project
+                                    </div>
+                                    <div class="col text-right">
+                                        <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
+                                        <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
+                                        <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
+                                        <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
+                                    </div>
+                                </div>
+                            </article>
+                            </div>
                         </div>
-                    </div>
-                </article>
 
-                        <article>
-                            <img class="img-fluid img-thumbnail rounded" src="images/macbook.jpg"  alt="MacBook">
-                            <div class="row">
-                                <div class="col">
-                                    featured project
-                                </div>
-                                <div class="col text-right">
-                                    <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
-                                    <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
-                                    <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
-                                    <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
-                                </div>
-                            </div>
-                        </article>
-                        <article>
-                            <img class="img-fluid img-thumbnail rounded" src="images/man.jpg" alt="A man wearing glasses">
-                            <div class="row">
-                                <div class="col">
-                                    featured project
-                                </div>
-                                <div class="col text-right">
-                                    <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
-                                    <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
-                                    <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
-                                    <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article>
-                            <img class="img-fluid img-thumbnail rounded" src="images/security.jpg" height="214.81px" alt="Security">
-                            <div class="row">
-                                <div class="col">
-                                    featured project
-                                </div>
-                                <div class="col text-right">
-                                    <i class="fas fa-circle fa-sm" style="color: var(--red);"></i>
-                                    <i class="fas fa-circle fa-sm" style="color: var(--yellow);"></i>
-                                    <i class="fas fa-circle fa-sm" style="color: var(--green);"></i>
-                                    <i class="fas fa-circle fa-sm" style="color: var(--blue);"></i>
-                                </div>
-                            </div>
-                        </article>
                     </div>
                 </div>
-                <div class="col-12 col-md-4">
-                        <aside class="anton">
 
-                            <div class="row mb-3">
+                <div class="col-12 col-md-4">
+
+                        <aside class="anton">
+                            <div class="row">
+                                <div class="col text-md-left able">
+                                    THE LAST
+                                </div>
+                            </div>
+                            <div class="row mb-3" style="margin-top: 2em;">
                                 <div class="col">
                                     <img class="float-left" src="images/mobile-phone.jpg" alt="Mobile">
                                     THE ADMIN BAR AND ABSOLUTE POSITIONING
@@ -271,8 +445,8 @@
 
                             <div class="row">
                                 <div class="col">
-                                    <h6 class="mb-4"><i class="fab fa-twitter" style="height:20%;"></i>LAST TWEET</h6>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim orci eget justo euismod malesuada. Curabitur nec eleifend ipsum. Praesent cursus erat eget massa sollicitudin luctus. Mauris ultricies non massa.
+                                    <h6 class="mb-4" style="font-family: Abel"><i class="fab fa-twitter" style="height:20%;"></i>LAST TWEET</h6>
+                                    <p style="font-weight: normal; font-family: Abel; text-transform: none">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim orci eget justo euismod malesuada. Curabitur nec eleifend ipsum. Praesent cursus erat eget massa sollicitudin luctus. Mauris ultricies non massa.</p>
                                 </div>
                             </div>
                                 </aside>
